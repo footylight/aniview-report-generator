@@ -38,7 +38,7 @@ export default function Home({ token }) {
   useEffect(() => {
     // console.log("tok", startDate, " ", endDate);
     moment.tz("America/Los_Angeles").format("YYYY-MM-DD HH:mm:ss");
-    const inputDate = moment(router.query.date).format("YYYY-MM-DD");
+    const inputDate = router.query.date;
     let startDate = moment()
       .subtract(1, "days")
       .startOf("day")
@@ -124,7 +124,7 @@ export const getServerSideProps = async ({ req, res }) => {
     const res = await axios(config);
     const { data } = res.data;
     token = data.token;
-    console.log("tpoken", token);
+    // console.log("tpoken", token);
     return { props: { token } };
   } catch (error) {
     console.log(error.message);
