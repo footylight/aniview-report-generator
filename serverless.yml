@@ -1,0 +1,4 @@
+# serverless.yml
+
+mobitechReportDashboard:
+  component: "@sls-next/serverless-component"
