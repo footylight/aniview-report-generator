@@ -63,7 +63,7 @@ export default function Home({ token }) {
     const getData = async () => {
       let config = {
         method: "get",
-        url: `https://manage.aniview.com/api/adserver/stats/report?startDate=${startDate}&endDate=${endDate}&dimensions=daily&metrics=inventory%2Cimpression%2Crevenue%2Cncpm%2CavgViewability&format=json&query={}`,
+        url: `https://manage.aniview.com/api/adserver/stats/report?startDate=${startDate}&endDate=${endDate}&dimensions=daily%2Ccd1%2Ccou&metrics=inventory%2Cimpression%2Crevenue%2Cncpm%2CavgViewability&format=json&query={}`,
         headers: {
           "X-Bamboo-Token": token,
         },
